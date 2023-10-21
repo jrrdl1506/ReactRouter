@@ -1,9 +1,12 @@
 import React from "react";
+import Menu from './menu';
 
-const About = () => {
+export default function About (){
     return (
+        <>
+        <Menu></Menu>
         <h1>About Component</h1>
+        </>
+        
     );
 }
-
-export default About;

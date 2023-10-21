@@ -6,24 +6,32 @@ import './index.css'
 import Home from './home'
 import About from './about'
 import Contact from './contact'
-
+import ContactoAnadido from './contactoAnadido'
+ 
 const router = createBrowserRouter([
   {
     path:'/',
-    element:Home,
+    element:<Home/>,
+    errorElement:<h1>Error</h1>
   },
   {
     path:'/about',
-    element:About,
+    element:<About/>,
   },
   {
     path:'/contact',
-    element:Contact,
+    element:<Contact/>,
+    children:[{
+      path:'/contact/:contactid',
+      element:<ContactoAnadido/>,   
+    },],
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router}>
+     
+    </RouterProvider>
   </React.StrictMode>,
 )

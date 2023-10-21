@@ -1,10 +1,15 @@
 import React from "react";
+import Menu from './menu';
+import { Outlet } from "react-router-dom";
 
-
-const Contact = () => {
+export default function Contact() {
     return(
-        <h1>Contacto component</h1>
+        <>
+         <Menu></Menu>
+         <h1>Contacto component</h1>
+         <Outlet/>
+        </>
+       
     );
 }
 
-export default Contact;

@@ -1,26 +1,14 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import Menu from './menu';
 
 
-const Home = () => {
+export default function  Home () {
     return (
         <div>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to={"/"}>Home</Link>
-                    </li>
-                    <li>
-                        <Link to={"/about"}>About</Link>
-                    </li>
-                    <li>
-                        <Link to={"/contact"}></Link>
-                    </li>
-                </ul>
-            </nav>
+            <Menu></Menu>
+           <h1>Home component</h1>
         </div>
     );
 
 }
 
-export default Home;
